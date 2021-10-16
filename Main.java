@@ -21,8 +21,11 @@ public class Main {
 		allCh = Sort(allCh);
 		System.out.println("\nsorted!!");
 		
-		allCh = precentegculc(allCh);
+		allCh = precentegculc(allCh, ch);
 		System.out.println("\nprecenteg culculted");
+		for(int i = 0; i<allCh.length; i++) {
+			System.out.println(allCh[i].amunt);
+		}
 		
 	}//main****************************************************
 	
@@ -108,12 +111,12 @@ public class Main {
 	}
 	
 	
-	public static NewChar[] precentegculc(NewChar[] nch){
+	public static NewChar[] precentegculc(NewChar[] nch, char[] ch){
 		
-		int sum = nch.length;
-		
+		double sum = ch.length;
+		System.out.println(sum);
 		for(int i = 0; i<nch.length; i++) {
-			nch[i].amunt = nch[i].amunt/sum;
+			nch[i].amunt = nch[i].amunt/sum*100;
 		}
 		
 		return nch;
