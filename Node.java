@@ -14,7 +14,10 @@ public class Node {
 	
 	public void insert(NewChar[] nch) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> parent of 68ae67c (1`)
 =======
 >>>>>>> parent of 68ae67c (1`)
 		

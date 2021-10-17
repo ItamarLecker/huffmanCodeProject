@@ -24,6 +24,9 @@ public class Main {
 		
 		allCh = precentegculc(allCh);
 		System.out.println("\nprecenteg culculted");
+<<<<<<< HEAD
+>>>>>>> parent of 68ae67c (1`)
+=======
 >>>>>>> parent of 68ae67c (1`)
 		
 	}//main****************************************************
@@ -129,10 +132,17 @@ public class Main {
 	
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static NewChar[] precentegculc(NewChar[] nch, int len){
 		
 		double sum = len;
 		System.out.println(sum);
+=======
+	public static NewChar[] precentegculc(NewChar[] nch){
+		
+		int sum = nch.length;
+		
+>>>>>>> parent of 68ae67c (1`)
 =======
 	public static NewChar[] precentegculc(NewChar[] nch){
 		
