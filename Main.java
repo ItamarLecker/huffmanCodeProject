@@ -8,53 +8,60 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
-		char[] ch = Read("C:\\Users\\Itamar\\eclipse-workspace\\tree\\src\\huffmanCodeProject\\txt.txt");
+		NewChar[] ch = Read("C:\\Users\\Itamar\\eclipse-workspace\\tree\\src\\huffmanCodeProject\\txt.txt");
 		
 		System.out.println("have an array");
 		
-		NewChar[] allCh;
+						
 		
-		allCh = culc(ch);
 		
-		System.out.println("\naonunt culculted!");
-		
-		allCh = Sort(allCh);
-		System.out.println("\nsorted!!");
-		
-		allCh = precentegculc(allCh, ch);
-		System.out.println("\nprecenteg culculted");
-		for(int i = 0; i<allCh.length; i++) {
-			System.out.println(allCh[i].amunt);
-		}
 		
 	}//main****************************************************
 	
-	public static char[] Read(String path) throws IOException {
+	public static NewChar[] Read(String path) throws IOException {
 		
 		FileReader fr = new FileReader(path);
 		
-		char[] ch = new char[0];
+		NewChar[] ch = new NewChar[0];
 		
 		int i;
+		int len = 0;
+
 		while((i = fr.read()) != -1) { 
 			
-			ch = AddChar((char)i, ch);
+			len++;
+			
+			char Char = (char)i;
+			
+			ch = func(Char, ch);
 		}
+
+		ch = Sort(ch);
+		System.out.println("\nsorted!!");
+		
+		ch = precentegculc(ch, len);
+		System.out.println("\nprecenteg culculted");
+		
+		for(int j = 0; j<ch.length; j++) {
+			System.out.println(ch[i].amunt);
+		}
+		
 		return ch;
 	}
 	
-	public static char[] AddChar(char chToAdd, char[] ch) {
+	
+	public static NewChar[] func(char Char, NewChar[] ch) {
 		
-		char[] newch = new char[ch.length + 1];
+		NewChar[] nch = new NewChar[ch.length + 1];
 		
 		for(int i = 0; i<ch.length; i++) {
-			newch[i] = ch[i];
+			
+			nch[i] = ch[i];
+			
 		}
-		newch[newch.length -1] = chToAdd; 
+		nch[nch.length -1].ch = Char;
 		
-		
-		return newch;
-		
+		return nch;
 		
 	}
 	
@@ -111,14 +118,13 @@ public class Main {
 	}
 	
 	
-	public static NewChar[] precentegculc(NewChar[] nch, char[] ch){
+	public static NewChar[] precentegculc(NewChar[] nch, int len){
 		
-		double sum = ch.length;
+		double sum = len;
 		System.out.println(sum);
 		for(int i = 0; i<nch.length; i++) {
 			nch[i].amunt = nch[i].amunt/sum*100;
 		}
-		
 		return nch;
 		
 	}

@@ -13,7 +13,7 @@ public class Node {
 	}
 	
 	public void insert(NewChar[] nch) {
-		boolean 
+		 
 		
 		if(nch[0].amunt >= sum(nch,1)) {
 			
