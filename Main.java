@@ -15,6 +15,16 @@ public class Main {
 						
 		
 		
+<<<<<<< HEAD
+=======
+		System.out.println("\naonunt culculted!");
+		
+		allCh = Sort(allCh);
+		System.out.println("\nsorted!!");
+		
+		allCh = precentegculc(allCh);
+		System.out.println("\nprecenteg culculted");
+>>>>>>> parent of 68ae67c (1`)
 		
 	}//main****************************************************
 	
@@ -118,12 +128,19 @@ public class Main {
 	}
 	
 	
+<<<<<<< HEAD
 	public static NewChar[] precentegculc(NewChar[] nch, int len){
 		
 		double sum = len;
 		System.out.println(sum);
+=======
+	public static NewChar[] precentegculc(NewChar[] nch){
+		
+		int sum = nch.length;
+		
+>>>>>>> parent of 68ae67c (1`)
 		for(int i = 0; i<nch.length; i++) {
-			nch[i].amunt = nch[i].amunt/sum*100;
+			nch[i].amunt = nch[i].amunt/sum;
 		}
 		return nch;
 		

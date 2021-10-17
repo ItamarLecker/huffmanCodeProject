@@ -3,7 +3,7 @@ package huffmanCodeProject;
 public class NewChar {
 	
 	char ch;
-	double amunt;
+	int amunt;
 	
 	public NewChar(char ch) {
 		this.ch = ch;

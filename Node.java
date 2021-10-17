@@ -13,20 +13,14 @@ public class Node {
 	}
 	
 	public void insert(NewChar[] nch) {
+<<<<<<< HEAD
 		 
+=======
+>>>>>>> parent of 68ae67c (1`)
 		
-		if(nch[0].amunt >= sum(nch,1)) {
+		if() {
 			
 		}
-		
-	}
-	
-	public double sum(NewChar[] nch, int n) {
-		double sum = 0;
-		for(int i = n; i<nch.length; i++) {
-			sum = nch[i].amunt + sum;
-		}
-		return sum;
 		
 	}
 	
