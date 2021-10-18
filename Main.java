@@ -26,10 +26,18 @@ public class Main {
 			System.out.println(allCh[i].amunt);
 		}
 		
+		Node root = new Node(100);
+		System.out.println("len = "+allCh.length);
+		
+		char[] p = new char[0];
+		
+		root.insert(allCh,p);
+		root.print();
 	}//main****************************************************
 	
 	public static char[] Read(String path) throws IOException {
 		
+		@SuppressWarnings("resource")
 		FileReader fr = new FileReader(path);
 		
 		char[] ch = new char[0];
