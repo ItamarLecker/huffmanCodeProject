@@ -23,7 +23,7 @@ public class Main {
 		allCh = precentegculc(allCh, ch);
 		System.out.println("\nprecenteg culculted");
 		for(int i = 0; i<allCh.length; i++) {
-			System.out.println(allCh[i].amunt);
+			System.out.println(allCh[i].amunt+"  ch = "+allCh[i].ch);
 		}
 		
 		Node root = new Node(100);

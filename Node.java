@@ -21,27 +21,68 @@ public class Node {
 		this.datai = data;
 	}
 	
-	
+	//insert 
 	public void insert(NewChar[] nch, char[] p) {
 		if(nch.length > 1) {
+			boolean isItBig = true;
+			int toS =0,toE =1;
+			if(nch.length <=1) {
+				
+			}
+			while(isItBig){
+				if(sumToStart(nch,toS) > sumToEnd(nch,toE)) {
+					NewChar[][] aa = new NewChar[2][];
+					aa = brake(nch, toE);
+					R.insert(aa[0], p);
+					L.insert(aa[1], p);
+				}else {
+					toS++;
+					toE++;
+				}
+				
+			}
 			
-			System.out.println("insert");
-			R = new Node(nch[0].ch);
-			R.path = add(p,'1');
-			L = new Node(sum(nch, 1));
-			nch = remove(nch);
-			p = add(p,'0');
-			L.insert(nch,p);
+			
 		}
 		
 	}
 	
-	public double sum(NewChar[] nch, int n) {
+	public double sumToEnd(NewChar[] nch, int n) {
 		double sum = 0;
 		for(int i = n; i<nch.length; i++) {
 			sum = nch[i].amunt + sum;
 		}
 		return sum;
+		
+	}
+	
+	public double sumToStart(NewChar[] nch, int n) {
+		double sum = 0;
+		for(int i = 0; i<=n; i++) {
+			sum = nch[i].amunt + sum;
+		}
+		return sum;
+		
+	}
+	
+	public NewChar[][] brake(NewChar[] ch, int cp) {
+		NewChar[][] nch = new NewChar[2][]; 
+		NewChar[] ch1 = new NewChar[cp+1];
+		NewChar[] ch2 = new NewChar[ch.length-ch1.length];
+		int num=0;
+		for(int i = 0; i<ch1.length; i++) {
+			ch1[i] = ch[num];
+			num++;
+		}
+		
+		for(int i = 0; i<ch2.length; i++) {
+			ch2[i] = ch[num];
+			num++;
+		}
+		
+		nch[0] = ch1;
+		nch[1] = ch2;
+		return nch;
 		
 	}
 	
