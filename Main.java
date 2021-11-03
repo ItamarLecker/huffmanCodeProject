@@ -14,24 +14,24 @@ public class Main {
 						
 		
 		
-<<<<<<< HEAD
-=======
-		System.out.println("\naonunt culculted!");
+
+		for(int i = 0; i<allCh.length; i++) {
+			System.out.println(allCh[i].amunt+"  ch = "+allCh[i].ch);
+		}
+
 		
-		allCh = Sort(allCh);
-		System.out.println("\nsorted!!");
+		Node root = new Node(100);
+		System.out.println("len = "+allCh.length);
 		
-		allCh = precentegculc(allCh);
-		System.out.println("\nprecenteg culculted");
-<<<<<<< HEAD
->>>>>>> parent of 68ae67c (1`)
-=======
->>>>>>> parent of 68ae67c (1`)
+		char[] p = new char[0];
 		
+		root.insert(allCh,p);
+		root.print();
 	}//main****************************************************
 	
 	public static NewChar[] Read(String path) throws IOException {
 		
+		@SuppressWarnings("resource")
 		FileReader fr = new FileReader(path);
 		
 		NewChar[] ch = new NewChar[0];
@@ -130,24 +130,11 @@ public class Main {
 	}
 	
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-	public static NewChar[] precentegculc(NewChar[] nch, int len){
-		
-		double sum = len;
-		System.out.println(sum);
-=======
+
 	public static NewChar[] precentegculc(NewChar[] nch){
 		
 		int sum = nch.length;
 		
->>>>>>> parent of 68ae67c (1`)
-=======
-	public static NewChar[] precentegculc(NewChar[] nch){
-		
-		int sum = nch.length;
-		
->>>>>>> parent of 68ae67c (1`)
 		for(int i = 0; i<nch.length; i++) {
 			nch[i].amunt = nch[i].amunt/sum;
 		}
@@ -158,25 +145,4 @@ public class Main {
 	
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
