@@ -42,11 +42,8 @@ public class Node {
 				
 			}
 			
-			
-		}
-		
-	}
-	
+
+
 	public double sumToEnd(NewChar[] nch, int n) {
 		double sum = 0;
 		for(int i = n; i<nch.length; i++) {
@@ -123,6 +120,6 @@ public class Node {
 		return nch;
     }
 	
-	
+
 
 }

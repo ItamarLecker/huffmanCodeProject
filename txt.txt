@@ -1,1 +1,2 @@
 qweqytwrewqttwterqtwqyweqweytqrwtrwrwrwyqtwreytrqyyqyqtwertqwryqwre
+All the programming languages covered by this book provide a simple, efficient way to check the length of text. For example, JavaScript strings have a length property that holds an integer indicating the string’s length. However, using regular expressions to check text length can be useful in some situations, particularly when length is only one of multiple rules that determine
